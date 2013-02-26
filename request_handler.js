@@ -10,6 +10,7 @@ function welcome(request, response) {
   }
   
   //sleep(10000);
+  /*
   exec("ls -lah", 
       {timeout:10000, maxBuffer: 20000*1024 },
       function (error, stdout, stderr) {
@@ -18,12 +19,11 @@ function welcome(request, response) {
         response.end();
       }
       );
-  /*
+      */
   response.writeHead(200, {"Content-Type": "text/plain"});
   response.write( "Welcome to the world of Node.js.");
   response.end();
-  */
-}
+  }
 
 function add(request, response) {
   var values = querystring.parse(url.parse(request.url).query);
